@@ -1,3 +1,4 @@
+import { Location } from './location';
 import { OperationHoursMap } from './operation-hours-map';
 import { Review } from './review';
 
@@ -7,9 +8,9 @@ export interface Restaurant {
   neighborhood: string;
   photograph: string;
   address: string;
-  location: Location;
+  latlng: Location;
   image: string;
   cuisine_type: string;
-  operating_hours: OperationHoursMap
+  operating_hours: OperationHoursMap;
   reviews: Review[];
 }
