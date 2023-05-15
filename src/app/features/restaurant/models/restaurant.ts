@@ -1,6 +1,6 @@
-import { Location } from './location';
-import { OperationHoursMap } from './operation-hours-map';
-import { Review } from './review';
+import { Location } from "./location";
+import { OperationHoursMap } from "./operation-hours-map";
+import { Review } from "./review";
 
 export interface Restaurant {
   id: number;
