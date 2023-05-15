@@ -8,6 +8,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import { Restaurant } from "../../models";
 import "./restaurant.component.css";
 
@@ -33,7 +34,9 @@ export default function RestaurantComponent({ restaurant }: Props) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button startIcon={<VisibilityIcon />}>View details</Button>
+          <Link href={`/restaurant/details/${restaurant.id}`}>
+            <Button startIcon={<VisibilityIcon />}>View details</Button>
+          </Link>
         </CardActions>
       </Card>
     </>

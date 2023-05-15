@@ -1,4 +1,4 @@
-import restaurantData from "../../../../../data/restaurants.json";
+import restaurantData from "../../../../data/restaurants.json";
 import { Restaurant } from "../models/restaurant";
 
 const restaurants = restaurantData as Restaurant[];

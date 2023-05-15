@@ -2,9 +2,9 @@
 
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
-import RestaurantListComponent from "./features/restaurant/components/restaurant-list/restaurant-list.component";
-import { Restaurant } from "./features/restaurant/models";
-import { getRestaurants } from "./features/restaurant/services/restaurant.service";
+import RestaurantListComponent from "./restaurant/components/restaurant-list/restaurant-list.component";
+import { Restaurant } from "./restaurant/models";
+import { getRestaurants } from "./restaurant/services/restaurant.service";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export default function Page() {
       }
       setRestaurants(restaurants);
     });
-  }, []);
+  }, []);   
 
   return (
     <main className={`${inter.className}`}>
