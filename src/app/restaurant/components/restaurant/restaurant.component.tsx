@@ -6,11 +6,14 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  Stack,
   Typography,
 } from "@mui/material";
 import Link from "next/link";
 import { Restaurant } from "../../models";
 import "./restaurant.component.css";
+import CuisineTypeComponent from "@app/restaurant/details/components/cuisine-type-badge.component";
+import LocationBadgeComponent from "@app/restaurant/details/components/location-badge.component";
 
 interface Props {
   restaurant: Restaurant;
@@ -29,9 +32,10 @@ export default function RestaurantComponent({ restaurant }: Props) {
         />
         <CardHeader title={restaurant.name} />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {restaurant.cuisine_type}
-          </Typography>
+          <Stack direction="row" spacing={1}>
+            <CuisineTypeComponent cuisine_type={restaurant.cuisine_type} />
+            <LocationBadgeComponent neighborhood={restaurant.neighborhood} />
+          </Stack>
         </CardContent>
         <CardActions>
           <Link href={`/restaurant/details/${restaurant.id}`}>

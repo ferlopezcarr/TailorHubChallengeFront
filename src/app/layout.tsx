@@ -1,5 +1,5 @@
 
-import Header from "@components/header/header";
+import HeaderComponent from "@components/header/header.component";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className={inter.className} suppressHydrationWarning={true}>
-        <Header />
+        <HeaderComponent />
         {children}
       </body>
     </html>

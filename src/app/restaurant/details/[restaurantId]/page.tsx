@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getNumberFromQueryRoute } from "../../../../core/services";
 import { Restaurant } from "../../models";
 import { findRestaurantById } from "../../services/restaurant.service";
-import RestaurantDetailsComponent from "../components/restaurant-details.component";
+import RestaurantDetailsComponent from "../components/restaurant-details/restaurant-details.component";
 
 export default function Page({ params }: { params: { restaurantId: string } }) {
   let [restaurant, setRestaurant] = useState<Restaurant>();
